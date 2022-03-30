@@ -25,7 +25,7 @@ import day2
         (-1, (8, [1, 3, 5, 7])),
     ],
 )
-def test_chop_day2(expected, test_input):
+def test_chop_day2(expected: int, test_input: tuple[int, list[int]]):
     assert day2.chop(*test_input) == expected
 
 
@@ -52,7 +52,7 @@ def test_chop_day2(expected, test_input):
         ([1, 3], (8, [1, 3, 5, 7])),
     ],
 )
-def test_chopper_left(expected, test_input):
+def test_chopper_left(expected: int, test_input: tuple[int, list[int]]):
     chopper = day2.Chopper(*test_input)
     assert chopper.left == expected
 
@@ -80,7 +80,7 @@ def test_chopper_left(expected, test_input):
         ([5, 7], (8, [1, 3, 5, 7])),
     ],
 )
-def test_chopper_right(expected, test_input):
+def test_chopper_right(expected: int, test_input: tuple[int, list[int]]):
     chopper = day2.Chopper(*test_input)
     assert chopper.right == expected
 
@@ -108,7 +108,7 @@ def test_chopper_right(expected, test_input):
         (False, (8, [1, 3, 5, 7])),
     ],
 )
-def test_chopper_look_left(expected, test_input):
+def test_chopper_look_left(expected: int, test_input: tuple[int, list[int]]):
     chopper = day2.Chopper(*test_input)
     assert chopper.look_left() == expected
 
@@ -136,6 +136,6 @@ def test_chopper_look_left(expected, test_input):
         (False, (8, [1, 3, 5, 7])),
     ],
 )
-def test_chopper_look_right(expected, test_input):
+def test_chopper_look_right(expected: int, test_input: tuple[int, list[int]]):
     chopper = day2.Chopper(*test_input)
     assert chopper.look_right() == expected

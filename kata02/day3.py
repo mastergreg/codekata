@@ -1,4 +1,4 @@
-def chop_h(search: int, array: list[int], tally: int):
+def chop_h(search: int, array: list[int], tally: int) -> int:
     match array:
         case []:
             return -1
@@ -6,11 +6,16 @@ def chop_h(search: int, array: list[int], tally: int):
             return tally
         case [_]:
             return -1
-    left = array[: len(array) // 2]
-    right = array[len(array) // 2 :]
-    left_search = chop_h(search, left, tally)
-    right_search = chop_h(search, right, tally + len(left))
-    return max(left_search, right_search)
+        case _:
+            pass
+    mid = len(array) // 2
+    pivot = array[mid]
+    if search >= pivot:
+        right = array[mid:]
+        return chop_h(search, right, tally + mid)
+    else:
+        left = array[:mid]
+        return chop_h(search, left, tally)
 
 
 def chop(search: int, array: list[int]):

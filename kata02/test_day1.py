@@ -25,5 +25,5 @@ import day1
         (-1, (8, [1, 3, 5, 7])),
     ],
 )
-def test_chop_day1(expected, test_input):
+def test_chop_day1(expected: int, test_input: tuple[int, list[int]]):
     assert day1.chop(*test_input) == expected

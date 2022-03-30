@@ -21,7 +21,7 @@ class Chopper:
             return False
         return self.right[0] <= self.search <= self.right[-1]
 
-    def look(self):
+    def look(self) -> tuple[int, list[int]]:
         if self.array and self.array[0] == self.search:
             return 0, []
         if self.look_left():

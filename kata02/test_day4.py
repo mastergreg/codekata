@@ -1,5 +1,5 @@
 import pytest
-import day3
+import day4
 
 
 @pytest.mark.parametrize(
@@ -25,5 +25,5 @@ import day3
         (-1, (8, [1, 3, 5, 7])),
     ],
 )
-def test_chop_day3(expected: int, test_input: tuple[int, list[int]]):
-    assert day3.chop(*test_input) == expected
+def test_chop_day4(expected: int, test_input: tuple[int, list[int]]):
+    assert day4.chop(*test_input) == expected
